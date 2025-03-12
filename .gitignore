@@ -2,6 +2,13 @@
 .env
 
 # c program
-c/hello
-c/eod
-c/add
+# c/hello
+# c/eod
+# c/add
+# c/file
+c/*
+
+c/a.out
+
+c/*.o
+
