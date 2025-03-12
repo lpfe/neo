@@ -8,7 +8,8 @@
 # c/file
 c/*
 
-c/a.out
+# c/a.out
 
-c/*.o
+# c/*.o
 
+!c/*.c
