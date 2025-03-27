@@ -7,6 +7,19 @@ sleep 5s
 # Directory Setup
 if [ -d /replica/data ]; then
     rm -rf /replica/data
+
+    sleep 3s
+    
+    mkdir -pv /replica/data
+    mkdir -pv /replica/data/master
+    mkdir -pv /replica/data/slave1
+    mkdir -pv /replica/data/slave2
+    mkdir -pv /replica/data/arbiter
+
+    touch /replica/data/master/master.log
+    touch /replica/data/slave1/slave1.log
+    touch /replica/data/slave2/slave2.log
+    touch /replica/data/arbiter/arbiter.log
 else
     mkdir -pv /replica/data
     mkdir -pv /replica/data/master
