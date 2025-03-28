@@ -1,4 +1,4 @@
-CREATE TABLE usertbl (
+CREATE TABLE shop.usertbl (
 	userid char(8) NOT NULL PRIMARY KEY,
 	username nvarchar2(20) NOT NULL,
 	birthyear number(4) NOT NULL,
@@ -6,9 +6,8 @@ CREATE TABLE usertbl (
 	mobile1 char(3),
 	mobile2 char(8),
 	height number(3),
-	mdate	DATE
+	mdata DATE
 );
-
 
 insert into shop.usertbl values('LSG', '이승기', 1987, '서울', '011', '11111111', 182, '2008-8-8');
 insert into shop.usertbl values('KBS', '김범수', 1979, '경남', '011', '22222222', 173, '2012-4-4');
@@ -20,3 +19,4 @@ insert into shop.usertbl values('YJS', '윤종신', 1969, '경남', NULL, NULL, 
 insert into shop.usertbl values('EJW', '은지원', 1972, '경북', '011', '88888888', 174, '2014-3-3');
 insert into shop.usertbl values('JKW', '조관우', 1965, '경기', '018', '99999999', 172, '2010-10-10');
 insert into shop.usertbl values('BBK', '바비킴', 1973, '서울', '010', '00000000', 176, '2013-5-5');
+
