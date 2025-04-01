@@ -97,8 +97,8 @@ async def users_param(id: str):
         except ValueError:
             raise HTTPException(status_code=500, detail="Invalid JSON response from server")
         
-        if not data:
-            return {"message": "User not found", "data": None}
+        # if not data:
+        #     return {"message": "User not found", "data": None}         없어도 되는 코드
         
         return data
     
