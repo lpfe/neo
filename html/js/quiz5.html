@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>quiz5</title>
+    </head>
+    <body>
+        <h3>누적합산 하여 20보다 크면 종료</h3><hr />
+        <script>
+            var array = new Array();
+            var sum = 0;
+            var i = 0;
+            while (true) {
+                var n = Math.floor(Math.random() * 5) + 1;
+                array[i] = n;
+                sum += n;
+                document.write(array[i] + "<br>");
+                if (sum > 20) {
+                    document.write("sum : " , sum + "<br>");
+                    break;
+                }
+                i++;
+            }
+        </script>
+    </body>
+</html>

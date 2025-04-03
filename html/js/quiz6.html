@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz6</title>
+    </head>
+    <body>
+        <h3>입력받은 값으로 배열 생성 및 중복제거</h3><hr />
+        <script>
+            var arr = new Array();
+            var n = prompt("두 개의 숫자(배열의 길이와 랜덤 숫자 범위)를 입력하세요 : ", "5, 10");
+            number = n.split(",");
+            for (i = 0; i < number[0]; i++) {
+                arr[i] = Math.floor(Math.random() * number[1]) + 1;
+                for (j = 0; j < i; j++) {
+                    if (arr[i] == arr[j]) {
+                        i--;    // arr 같으면 인덱스 하나 제거
+                        continue;   // 해서 다시 첫 for문으로 돌아감
+                    }
+                }
+            }
+            document.write("배열의 길이 : " + number[0] + "<br>");
+            document.write(`배열의 길이 : ${arr.length} <br>`);
+            document.write(`입력된 배열 ${arr}`);
+        </script>
+    </body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz6</title>
+    </head>
+    <body>
+        <h3>입력받은 값으로 배열 생성 및 중복제거</h3><hr />
+        <script>
+            while(true){
+                var input = prompt("두 개의 숫자(배열의 길이와 랜덤 숫자 범위)를 입력하세요 : ", "5, 10");
+                number = input.split(",");
+                if (parseInt(number[0]) > parseInt(number [1])) {
+                    alert("배열의 길이는 랜덤 숫자 범위보다 작아야 합니다.");
+                    continue;
+                } else {
+                    var arr = new Array();
+                    for (i = 0; i < number[0]; i++) {
+                        arr[i] = Math.floor(Math.random() * number[1]) + 1;
+                        for (j = 0; j < i; j++) {
+                            if (arr[i] == arr[j]) {
+                                i--;    // arr 같으면 인덱스 하나 제거
+                                continue;   // 해서 다시 첫 for문으로 돌아감
+                            }
+                        }
+                    
+                }
+            }
+            }
+            document.write("배열의 길이 : " + number[0] + "<br>");
+            document.write(`배열의 길이 : ${arr.length} <br>`);
+            document.write(`입력된 배열 ${arr}`);
+        </script>
+    </body>
+</html>

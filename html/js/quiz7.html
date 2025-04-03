@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz7</title>
+    </head>
+    <body>
+        <h3>현재까지의 경과시간 구하기(D-day)</h3>
+    </body>
+    <script>
+        var now = new Date();
+        document.write(`현재시간 : ${now} <br><br>`);
+        var oldTime = new Date(2022, 7, 1, 9, 0, 0);
+        document.write(`기준시간 : ${oldTime} <br><br>`);
+        var diff = now - oldTime;
+        var diffSec = Math.floor(diff / 1000);
+        var diffMin = Math.floor(diffSec / 60);
+        var diffHour = Math.floor(diffMin / 60);
+        var diffDay = Math.floor(diffHour / 24);
+        var diffMonth = Math.floor(diffDay / 30);
+        var diffYear = Math.floor(diffMonth / 12);
+        document.write(`현재까지의 경과시간 : ${diffYear}년 ${diffMonth}개월 ${diffDay}일 ${diffHour}시간 ${diffMin}분 ${diffSec}초`);
+        document.write("<br><br>");
+        document.write(`현재까지의 경과시간 : ${diffYear}년 ${diffMonth}개월 ${diffDay}일 ${diffHour}시간 ${diffMin}분 ${diffSec}초`);
+
+    </script>
+</html>
