@@ -55,6 +55,7 @@ node/**/package-lock.json
 
 
 # Python
+.idea
 python/**/.venv
 python/**/__pycache__/
 
