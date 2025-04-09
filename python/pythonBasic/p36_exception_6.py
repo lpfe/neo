@@ -10,11 +10,11 @@ def division_function(a, b) :
     except Exception as e :
         return -3
 
-division_function("a", 1)
+ret = division_function("a", 1)
 print(ret)
-division_function(1, 0)
+ret = division_function(1, 0)
 print(ret)
-division_function(4, 2)
+ret = division_function(4, 2)
 
 if ret != None :
     print("Error")
