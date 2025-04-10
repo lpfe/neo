@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import pygame, sys
-from pygame.locals import *
+from pygame.locals imp
 
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((400, 300))
