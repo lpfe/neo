@@ -10,14 +10,6 @@ html = open('/work/neo/html/source/5/ex5-10.html', 'r', encoding='utf-8')
 soup = BeautifulSoup(html, 'html.parser')
 body = soup.select_one('body')
 ptag = body.find('p')
-# print('1번째 p 태그 : ', ptag['class'])
-# ptag['class'][1] = 'white'
-# print('1번째 p 태그 : ', ptag['class'])
-# ptag['id'] = 'apple'
-# print("-" * 50)
-
-# print('1번째 p 태그의 id 속성 : ', ptag['id'])
-# print("-" * 50)
 
 body_tag = soup.findAll('td')
 print(body_tag)
