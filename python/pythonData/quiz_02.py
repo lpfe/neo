@@ -51,36 +51,40 @@ myframe.to_csv(filename, encoding = 'utf-8', index = False)
 print(filename + ' saved')
 
 
-dfmovie = myframe.reindex(columns = ['제목', '평점', '예매율'])
-print(dfmovie)
+# dfmovie = myframe.reindex(columns = ['제목', '평점', '예매율'])
+# print(dfmovie)
 
-mygroup0 = dfmovie['제목']
-mygroup1 = dfmovie['평점']
-mygroup1 = mygroup1.str.replace('%', '')
-mygroup1 = mygroup1.str.replace('?', '0')
-mygroup2 = dfmovie['예매율']
-mygroup2 = mygroup2.str.replace('%', '')
-mygroup2 = mygroup2.str.replace('?', '0')
+# mygroup0 = dfmovie['제목']
+# mygroup1 = dfmovie['평점']
+# mygroup1 = mygroup1.str.replace('%', '')
+# mygroup1 = mygroup1.str.replace('?', '0')
+# mygroup2 = dfmovie['예매율']
+# mygroup2 = mygroup2.str.replace('%', '')
+# mygroup2 = mygroup2.str.replace('?', '0')
 
-df = pd.concat([mygroup1, mygroup2], axis = 1)
-df =df.set_index(mygroup0)
-df.columns = ['평점', '예매율']
-print(df)
+# df = pd.concat([mygroup1, mygroup2], axis = 1)
+# df =df.set_index(mygroup0)
+# df.columns = ['평점', '예매율']
+# print(df)
 
-df.astype(float).plot(kind = 'barh', title = '영화별 평점과 예매율', rot = 0)
-filename = 'quiz_02_cgvMovie.png'
-plt.savefig(filename, dpi = 400, bbox_inches = 'tight')
-print(filename + ' saved')
-plt.show()
-
-
-# myframe['평점'] = myframe['평점'].str.replace('%', '').astype(float)
-# myframe['예매율'] = myframe['예매율'].str.replace('%', '').astype(float)
-
-# # matplotlib row bar
-# myframe.astype(float).plot(kind = 'bar', rot = 0, legend = True, title = '영화별 평점과 예매율')
-
+# df.astype(float).plot(kind = 'barh', title = '영화별 평점과 예매율', rot = 0)
 # filename = 'quiz_02_cgvMovie.png'
 # plt.savefig(filename, dpi = 400, bbox_inches = 'tight')
 # print(filename + ' saved')
 # plt.show()
+
+myframe = myframe.reindex(columns = ['제목', '평점', '예매율'])
+
+myframe['평점'] = myframe['평점'].str.replace('%', '').str.replace('?', '0')
+myframe['예매율'] = myframe['예매율'].str.replace('%', '').str.replace('?', '0')
+
+myframe = myframe.set_index(keys = ['제목'])
+myframe.columns = ['평점', '예매율']
+
+# # matplotlib row bar
+myframe.astype(float).plot(kind = 'barh', rot = 0, title = '영화별 평점과 예매율')
+
+filename = 'quiz_02_cgvMovie.png'
+plt.savefig(filename, dpi = 400, bbox_inches = 'tight')
+print(filename + ' saved')
+plt.show()
