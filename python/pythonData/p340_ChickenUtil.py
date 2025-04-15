@@ -27,7 +27,7 @@ class ChickenStore() :
             return BeautifulSoup(self.soup, 'html.parser')
         
     def get_request_url(self) :
-        request = urllib.reques.Request(self.url)
+        request = urllib.request.Request(self.url)
         try :
             context = ssl._create_unverified_context()
             response = urllib.request.urlopen(request, context = context)
