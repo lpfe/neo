@@ -58,7 +58,7 @@ node/**/package-lock.json
 .idea
 python/**/.venv
 python/**/__pycache__/
-
+python/project/
 
 ## mongodb
 mongodb/backup
