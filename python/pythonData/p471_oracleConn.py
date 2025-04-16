@@ -1,6 +1,6 @@
 import cx_Oracle
 
-cx_Oracle.init_oracle_client(lib_dir = "/Users/cheol/OracleXE/instantclient_19_26")
+cx_Oracle.init_oracle_client(lib_dir = "/usr/local/OracleXE/instantclient_19_26")
 
 conn = None
 cur = None
@@ -8,7 +8,7 @@ cur = None
 try :
     loginfo = 'hr/1234@192.168.1.145:1521/xe'
     conn = cx_Oracle.connect(loginfo)
-    
+
 
     print(type(conn))
 
