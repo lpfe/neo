@@ -31,7 +31,7 @@ try:
     print(myseries)
 
     for idx in range(0, 2) :
-        myframe = myseries.unstack(idx)
+        myframe = myseries.unstack(idx)  # unstack() : Series -> DataFrame
         print(myframe)
 
         myframe.plot(kind = 'barh', rot = 0)
