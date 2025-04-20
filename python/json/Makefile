@@ -1,5 +1,5 @@
 all:
-	json-server --watch ./data.json --host 0.0.0.0 --port 5000 &
+	json-server --watch ./busanStore_fixed.json --host 0.0.0.0 --port 5000 &
 install:
 	pip install json-server
 ps:

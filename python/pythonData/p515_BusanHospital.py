@@ -89,7 +89,7 @@ import json, urllib.request, datetime, math
 import os.path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.relpath('./')))
-secret_file = os.path.join(BASE_DIR, '../../secret.json')
+secret_file = os.path.join(BASE_DIR, '../../../secret.json')
 
 with open(secret_file) as f:
     secrets = json.loads(f.read())
