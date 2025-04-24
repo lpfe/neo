@@ -69,3 +69,6 @@ mongodb/backup
 oracle/node/dbConfig.js
 oracle/**/node_modules
 oracle/**/package-lock.json
+
+
+data
