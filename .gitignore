@@ -73,3 +73,7 @@ oracle/**/package-lock.json
 
 
 data
+
+## docker
+docker/mysql/mysql*
+docker/mongodb/mongo*
