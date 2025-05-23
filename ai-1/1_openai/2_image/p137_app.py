@@ -1,7 +1,7 @@
 import openai
 
 image = open('cat_sample.png', 'rb')
-mask = open('IMG_0339.png', 'rb')
+mask = open('cat_sample_mask.png', 'rb')
 
 response = openai.Image.create_edit(
     # model="gpt-3.5-turbo-instruct",
