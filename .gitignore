@@ -57,10 +57,10 @@ node/**/.serverless
 
 # Python
 .idea
-python/**/.venv
-python/**/__pycache__/
+**/.venv
+**/__pycache__/
 python/project/
-secret.json
+**/secret.json
 
 ## mongodb
 mongodb/backup
