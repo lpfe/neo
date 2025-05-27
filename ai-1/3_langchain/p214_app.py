@@ -66,13 +66,11 @@ chat_llm = ChatOpenAI(
     temperature=0.9
 )
 
-# 단일 메시지
 message = [HumanMessage(content="고양이 울음소리는?")]
 print("-" * 50)
 result = chat_llm(message)
 print(result.content)
 
-# 복수 메시지
 message_list = [
     [HumanMessage(content="고양이 울음소리는?")],
     [HumanMessage(content="까마귀 울음소리는?")]
