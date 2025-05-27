@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>별 찍기</title>
+</head>
+<body>
+<h3>별 찍기</h3>
+<hr>
+<script>
+    const rows = 10;
+    for (let i = 1; i <= rows; i++) {
+        // 공백 출력
+        for (let j = 1; j <= rows - i; j++) {
+            document.write("&nbsp;");
+        }
+        // 별 출력
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
