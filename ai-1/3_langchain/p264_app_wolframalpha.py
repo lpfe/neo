@@ -4,16 +4,10 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from langchain.agents import initialize_agent
 
-google_cse_id = os.environ.get("GOOGLE_CSE_ID")
-google_api_key = os.environ.get("GOOGLE_API_KEY")
+wolfram_alpha_app_id = os.environ.get("WOLFRAM_ALPHA_APPID")
 
-tools = load_tools(
-    tool_names = ["google-search"],
-    llm = ChatOpenAI(
-        model = "gpt-3.5-turbo",
-        temperature = 0
-    )
-)
+
+tools = load_tools(['wolfram-alpha'])
 
 memory =ConversationBufferMemory(
     memory_key = "chat_history",
@@ -31,7 +25,7 @@ agent = initialize_agent(
     memory = memory
 )
 
-query = "영화 명량의 감독은?"
+query = "How many kilometers is the distance between Seoul and Busan"
 print("-" * 50)
 print(query)
 print(agent.run(query))
