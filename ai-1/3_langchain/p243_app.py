@@ -45,7 +45,7 @@ qa_chain = RetrievalQAWithSourcesChain.from_chain_type(
     retriever = docsearch.as_retriever()
 )
 
-query = "함정이 뭔데?"
+query = "할머니집이 뭐하는 곳인데?"
 result = qa_chain({"question": query})
 
 print("-" * 50)
