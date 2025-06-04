@@ -88,3 +88,12 @@ ai-1/1_openai/4_fine_tuning/archiv
 **/*.mp3
 
 .DS_Store
+
+
+# llama
+**/model.safetensors
+**/llama.cpp
+**/*.gguf
+**/traning_data
+**/sft.json
+**/finetuned-*
