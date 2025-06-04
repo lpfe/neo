@@ -86,3 +86,5 @@ ai-1/1_openai/4_fine_tuning/archiv
 
 **/*.mp4
 **/*.mp3
+
+.DS_Store
