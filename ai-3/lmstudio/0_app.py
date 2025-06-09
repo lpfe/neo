@@ -7,7 +7,7 @@ client = OpenAI(base_url = LM_STUDIO_SERVE_URL, api_key = "lm-studio")
 model_name = "llama3.2"
 
 try :
-    completion = client.completions.create(
+    completion = client.chat.completions.create(
         model = model_name,
         messages = [
             {"role" : "system", "content" : "You are a helpful AI assistant."},
